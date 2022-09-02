@@ -1,0 +1,15 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+section {
+    padding-top: 2rem;
+    /* to demonstrate nav link scrolling */
+    padding-bottom: 25%;
+}
