@@ -2,34 +2,57 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains%20Mono" />
+    <script src="script.js"></script>
 </head>
 
-<header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#photos">Photos</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
-
 <body>
+    <header>
+        <nav>
+            <a id="home">Home</a>
+            <a id="about">About</a>
+            <a id="work">Work</a>
+            <a id="photos">Photos</a>
+            <a id="contact">Contact</a>
+        </nav>
+    </header>
     <main>
-        <section id="home">Hello, my name is Nathan Cobbett. I am a full stack developer based in Pittsburgh, PA. Welcome!</section>
-        <section id="about">I have a passion for web technologies and I take pride in creating responsive, accessible, and performant solutions that are empowering to users. I work well with teams that are collaborative, inclusive, and flexible. Feel free to reach out with
-            any opportunities that fit that description. When I'm not on my computer I enjoy skateboarding, bouldering, and gaming. I also run a wedding photography business with my wife.</section>
-        <section id="projects">Projects
+        <section id="content"></section>
+        <template id="homeTemplate">Hello, my name is Nathan Cobbett. I am a full stack developer based in Pittsburgh, PA. Welcome!</template>
+        <template id="aboutTemplate">I have a passion for web technologies and I take pride in creating responsive, accessible, and performant solutions that are empowering to users.
+            I work well with teams that are collaborative, inclusive, and flexible. Feel free to reach out with any opportunities that fit that description. 
+            When I'm not on my computer I enjoy skateboarding, bouldering, and gaming. I also run a wedding photography business with my wife.</template>
+        <template id="workTemplate">
             <ul>
+                <li>quizlet clone</li>
                 <li>logic calculator</li>
-                <li>flashcards</li>
                 <li>deckbox</li>
-                <li>this website</li>
+                <li>this site</li>
             </ul>
-        </section>
-        <section id="photos">My photos</section>
-        <section id="contact">Contact me</section>
+        </template>
+        <template id="photosTemplate">Photos</template>
+        <template id="contactTemplate">
+            <form 
+                action="mailto:cobbett.n@gmail.com"
+                method="POST"
+                enctype="multipart/form-data"
+                name="EmailForm">
+                <label>
+                    Name:
+                    <input type="text" name="name"/>
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email">
+                </label>
+                <label>
+                    Message:
+                    <textarea name="message"></textarea>
+                </label>
+                <input type="submit">
+            </form>
+        </template>
     </main>
 </body>
 
