@@ -1,6 +1,6 @@
 window.onload = () => {
     addNavListeners();
-    navigate('home');
+    navigate('about');
 }
 
 const navigate = (page) => {

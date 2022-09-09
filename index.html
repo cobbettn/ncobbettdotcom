@@ -2,58 +2,76 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="public/css/styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains%20Mono" />
-    <script src="script.js"></script>
+    <script src="public/js/script.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a id="home">Home</a>
-            <a id="about">About</a>
-            <a id="work">Work</a>
-            <a id="photos">Photos</a>
-            <a id="contact">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section id="content"></section>
-        <template id="homeTemplate">Hello, my name is Nathan Cobbett. I am a full stack developer based in Pittsburgh, PA. Welcome!</template>
-        <template id="aboutTemplate">I have a passion for web technologies and I take pride in creating responsive, accessible, and performant solutions that are empowering to users.
-            I work well with teams that are collaborative, inclusive, and flexible. Feel free to reach out with any opportunities that fit that description. 
-            When I'm not on my computer I enjoy skateboarding, bouldering, and gaming. I also run a wedding photography business with my wife.</template>
-        <template id="workTemplate">
-            <ul>
-                <li>quizlet clone</li>
-                <li>logic calculator</li>
-                <li>deckbox</li>
-                <li>this site</li>
-            </ul>
-        </template>
-        <template id="photosTemplate">Photos</template>
-        <template id="contactTemplate">
-            <form 
-                action="mailto:cobbett.n@gmail.com"
-                method="POST"
-                enctype="multipart/form-data"
-                name="EmailForm">
-                <label>
-                    Name:
-                    <input type="text" name="name"/>
-                </label>
-                <label>
-                    Email:
-                    <input type="email" name="email">
-                </label>
-                <label>
-                    Message:
-                    <textarea name="message"></textarea>
-                </label>
-                <input type="submit">
-            </form>
-        </template>
-    </main>
+    <div class="content">
+        <header>
+            <nav>
+                <a id="about">About</a>
+                <a id="work">Work</a>
+                <a id="photos">Photos</a>
+                <a id="contact">Contact</a>
+            </nav>
+        </header>
+        <hr>
+        <main>
+            <section id="content"></section>
+            <template id="aboutTemplate">
+                <div id="aboutContainer">
+                    <img src="public/assets/me.jpg" alt="Nathan Cobbett">
+                    <div>
+                        <p class="banner">Hello, my name is Nathan Cobbett. I'm a full stack developer based in Pittsburgh, PA.</p>
+                        <p>I have a passion for web technologies and I take pride in creating responsive, accessible, and performant applications that are empowering to users.
+                        I thrive in collaborative environments and work well with teams that value open communication, selflessness, and inclusivity.
+                        When I'm not on my computer I enjoy skateboarding, bouldering, and gaming.
+                        I also run a wedding photography business with my wife and you can find some of my photos here.</p>
+                    </div>
+                </div>
+            </template>
+            <template id="workTemplate">
+                <ul>
+                    <li>quizlet clone</li>
+                    <li>logic calculator</li>
+                    <li>deckbox</li>
+                    <li>this site</li>
+                </ul>
+            </template>
+            <template id="photosTemplate">Photos</template>
+            <template id="contactTemplate">
+                <form 
+                    action="mailto:cobbett.n@gmail.com"
+                    method="POST"
+                    enctype="multipart/form-data"
+                    name="EmailForm">
+                    <label>
+                        Name:
+                        <input type="text" name="name"/>
+                    </label>
+                    <label>
+                        Email:
+                        <input type="email" name="email">
+                    </label>
+                    <label>
+                        Message:
+                        <textarea name="message"></textarea>
+                    </label>
+                    <input type="submit">
+                </form>
+            </template>
+        </main>
+    </div>
+    <footer>
+        <a href="https://github.com/cjn98">
+            <img src="public/assets/GitHub_Logo_White.png" alt="My Github">
+        </a>
+        <a href="https://www.linkedin.com/in/nathan-cobbett/">
+            <img src="public/assets/linkedin.png" alt="My Linkedin">
+        </a>
+    </footer>
 </body>
 
 </html>
