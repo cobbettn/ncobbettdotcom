@@ -1,69 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-<head>
+<head>    
     <link rel="stylesheet" href="public/css/styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains%20Mono" />
     <script src="public/js/script.js"></script>
 </head>
 
 <body>
-    <div class="content">
-        <header>
-            <nav>
-                <a id="about">About</a>
-                <a id="work">Work</a>
-                <a id="photos">Photos</a>
-                <a id="contact">Contact</a>
-            </nav>
-        </header>
+    <header> 
+        <nav>
+            <a id="about">About</a>
+            <a id="work">Work</a>
+            <a id="photos">Photos</a>
+            <a id="contact">Contact</a>
+        </nav>
+    </header>
+    <main>
         <hr>
-        <main>
-            <section id="content"></section>
-            <template id="aboutTemplate">
-                <div id="aboutContainer">
-                    <img src="public/assets/me.jpg" alt="Nathan Cobbett">
-                    <div>
-                        <p class="banner">Hello, my name is Nathan Cobbett. I'm a full stack developer based in Pittsburgh, PA.</p>
-                        <p>I have a passion for web technologies and I take pride in creating responsive, accessible, and performant applications that are empowering to users.
-                        I thrive in collaborative environments and work well with teams that value open communication, selflessness, and inclusivity.
-                        When I'm not on my computer I enjoy skateboarding, bouldering, and gaming.
-                        I also run a wedding photography business with my wife and you can find some of my photos here.</p>
-                    </div>
-                </div>
-            </template>
-            <template id="workTemplate">
-                <ul>
-                    <li>quizlet clone</li>
-                    <li>logic calculator</li>
-                    <li>deckbox</li>
-                    <li>this site</li>
-                </ul>
-            </template>
-            <template id="photosTemplate">Photos</template>
-            <template id="contactTemplate">
-                <form 
-                    action="mailto:cobbett.n@gmail.com"
-                    method="POST"
-                    enctype="multipart/form-data"
-                    name="EmailForm">
-                    <label>
-                        Name:
-                        <input type="text" name="name"/>
-                    </label>
-                    <label>
-                        Email:
-                        <input type="email" name="email">
-                    </label>
-                    <label>
-                        Message:
-                        <textarea name="message"></textarea>
-                    </label>
-                    <input type="submit">
-                </form>
-            </template>
-        </main>
-    </div>
+        <!-- templates get attached in this div -->
+        <div id="content"></div>
+        
+        <template id="aboutTemplate">
+            <h1>Hello, my name is Nathan Cobbett. I'm a full stack developer based in Pittsburgh, PA.</h1>
+            <div class="bio">
+                <img id="aboutPicture" src="public/assets/me.jpg" alt="Nathan Cobbett">
+                <p>I have a passion for web technologies and I take pride in creating responsive, accessible, and performant applications that are empowering to users.
+                I thrive in collaborative environments and work well with teams that value open communication, selflessness, and inclusivity.</p>
+                <p>When I'm not working on my computer I enjoy skateboarding, bouldering, and gaming.
+                I also run a wedding photography business with my wife and you can find some of my photos here.</p>
+                <p>I'm open to job opportunites where I can work with other passionate developers and continue to grow as a software engineer. 
+                Feel free to check out my <a id="resume" href="public/assets/NathanCobbettResume.pdf" target="_blank">resume</a> and get in touch!</p>
+            </div>
+        </template>
+        
+        <template id="workTemplate">
+            <ul>
+                <li>quizlet clone</li>
+                <li>logic calculator</li>
+                <li>deckbox</li>
+                <li>this site</li>
+            </ul>
+        </template>
+       
+        <template id="photosTemplate">Photos</template>
+        
+        <template id="contactTemplate">
+            <form 
+                action="mailto:cobbett.n@gmail.com"
+                method="POST"
+                enctype="multipart/form-data"
+                name="EmailForm">
+                <label>
+                    Name:
+                    <input type="text" name="name"/>
+                </label>
+                <label>
+                    Email:
+                    <input type="email" name="email">
+                </label>
+                <label>
+                    Message:
+                    <textarea name="message"></textarea>
+                </label>
+                <input type="submit">
+            </form>
+        </template>
+
+    </main>
     <footer>
         <a href="https://github.com/cjn98">
             <img src="public/assets/GitHub_Logo_White.png" alt="My Github">
