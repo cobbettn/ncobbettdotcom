@@ -26,7 +26,7 @@
             <div class="bio">
                 <img id="aboutPicture" src="public/assets/me.jpg" alt="Nathan Cobbett">
                 <p>I have a passion for web technologies and I take pride in creating responsive, accessible, and performant applications that are empowering to users.
-                I thrive in collaborative environments and work well with teams that value open communication, selflessness, and inclusivity.</p>
+                I thrive in collaborative environments and work well with teams that value open communication, creativity, and inclusivity.</p>
                 <p>When I'm not working on my computer I enjoy skateboarding, bouldering, and gaming.
                 I also run a wedding photography business with my wife and you can find some of my photos here.</p>
                 <p>I'm open to job opportunites where I can work with other passionate developers and continue to grow as a software engineer. 
@@ -43,7 +43,14 @@
             </ul>
         </template>
        
-        <template id="photosTemplate">Photos</template>
+        <template id="photosTemplate">
+            <p>A few of my favorite photos from weddings and engagements I've shot over the past few years</p>
+            <div class="carousel">
+                <img id="currentPhoto" src="public/assets//photos/1.jpg" alt="image"/>
+            </div>
+            <button id="nextPhoto">Next</button>
+            <button id="prevPhoto">Prev</button>
+        </template>
         
         <template id="contactTemplate">
             <form 

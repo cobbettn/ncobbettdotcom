@@ -4,6 +4,7 @@ body {
     height: 100%;
     /* margin collapse fix to hide scrollbar */
     margin: 0; 
+    animation: fadeVisibility 1s;
 }
 
 body {
@@ -57,6 +58,7 @@ footer {
     flex-shrink: 0;
     display: flex;
     justify-content: center;
+    padding-bottom: 1rem;
 }
 
 footer img {
@@ -109,4 +111,19 @@ footer img {
     body {
         padding: 0 20%;
     }
+}
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#currentPhoto {
+    height: 90vh;
+    width: auto;
+    margin: auto;
 }
