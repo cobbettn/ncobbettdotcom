@@ -41,7 +41,7 @@ div#content {
     display: flex;
 }
 
-#aboutPicture {
+#homePicture {
     border-radius: 5%;
     height: auto;
     margin-left: 1em;
@@ -71,7 +71,7 @@ footer img {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    #aboutPicture{
+    #homePicture{
         width: 100%;
         float: none;
     }
@@ -84,14 +84,14 @@ footer img {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    #aboutPicture {
+    #homePicture {
         width: 50%;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    #aboutPicture {
+    #homePicture {
         width: 33%;
     }
     body {

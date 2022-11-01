@@ -4,13 +4,13 @@
 <head>    
     <link rel="stylesheet" href="public/css/styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains%20Mono" />
-    <script src="public/js/script.js"></script>
+    <script type="module" src="public/js/script.js"></script>
 </head>
 
 <body>
     <header> 
         <nav>
-            <a id="about">About</a>
+            <a id="home">Home</a>
             <a id="work">Work</a>
             <a id="photos">Photos</a>
             <a id="contact">Contact</a>
@@ -21,16 +21,16 @@
         <!-- templates get attached in this div -->
         <div id="content"></div>
         
-        <template id="aboutTemplate">
+        <template id="homeTemplate">
             <h1>Hello, my name is Nathan Cobbett. I'm a full stack developer based in Pittsburgh, PA.</h1>
             <div class="bio">
-                <img id="aboutPicture" src="public/assets/me.jpg" alt="Nathan Cobbett">
-                <p>I have a passion for web technologies and I take pride in creating responsive, accessible, and performant applications that are empowering to users.
-                I thrive in collaborative environments and work well with teams that value open communication, creativity, and inclusivity.</p>
-                <p>When I'm not working on my computer I enjoy skateboarding, bouldering, and gaming.
-                I also run a wedding photography business with my wife and you can find some of my photos here.</p>
-                <p>I'm open to job opportunites where I can work with other passionate developers and continue to grow as a software engineer. 
+                <img id="homePicture" src="public/assets/me.jpg" alt="Nathan Cobbett">
+                <p>I love building with web technologies and creating modern, accessible, and performant applications that empower users. 
+                I work best in collaborative environments and in teams that value open communication, inclusivity, and creativity.</p>
+                <p>I'm open to job opportunites where I can work with other like-minded developers and continue to grow as a software engineer. 
                 Feel free to check out my <a id="resume" href="public/assets/NathanCobbettResume.pdf" target="_blank">resume</a> and get in touch!</p>
+                <p>When I'm not working on my computer I like spending time in the woods, bouldering, and retro/tabletop gaming.
+                I also enjoy taking pictures as a hobby and help run a small photography business with my wife. You can find some of my photos here.</p>
             </div>
         </template>
         
