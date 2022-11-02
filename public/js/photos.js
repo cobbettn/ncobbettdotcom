@@ -1,6 +1,6 @@
-const totalPhotos = 27; // change this when photos are added
-let currentPhotoIndex = 1;
-const addPhotoListeners = () => {
+window.onload = () => {
+    const totalPhotos = 27; // update this count when photos are added/removed
+    let currentPhotoIndex = 1;
     const currentPhoto = document.querySelector('#currentPhoto');
     document.querySelector('#nextPhoto').addEventListener('click', () => {
         if (currentPhotoIndex < totalPhotos) {
@@ -15,5 +15,3 @@ const addPhotoListeners = () => {
         }
     });
 }
-
-export default addPhotoListeners;

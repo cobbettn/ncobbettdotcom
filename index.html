@@ -4,79 +4,41 @@
 <head>    
     <link rel="stylesheet" href="public/css/styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains%20Mono" />
-    <script type="module" src="public/js/home.js"></script>
+    <script src="public/js/navigation.js"></script>
 </head>
 
 <body>
     <header> 
         <nav>
-            <a id="home">Home</a>
-            <a id="work">Work</a>
-            <a id="photos">Photos</a>
-            <a id="contact">Contact</a>
+            <a href="/">Home</a>
+            <a href="work.html">Work</a>
+            <a href="photos.html">Photos</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
     <main>
         <hr>
-        <!-- templates get attached in this div -->
-        <section id="content"></section>
-        
-        <template id="homeTemplate">
-            <h1>Hello, my name is Nathan Cobbett. I'm a full stack developer based in Pittsburgh, PA.</h1>
-            <div class="bio">
-                <img id="homePicture" src="public/assets/me.jpg" alt="Nathan Cobbett">
-                <p>I love building with web technologies and creating modern, accessible, and performant applications that empower users. 
-                I work best in collaborative environments and in teams that value open communication, inclusivity, and creativity.</p>
-                <p>I'm open to job opportunites where I can work with other like-minded developers and continue to grow as a software engineer. 
-                Feel free to check out my <a id="resume" href="public/assets/NathanCobbettResume.pdf" target="_blank">resume</a> and get in touch!</p>
-                <p>When I'm not working on my computer I like spending time in the woods, bouldering, and retro/tabletop gaming.
-                I also enjoy taking pictures as a hobby and help run a small photography business with my wife. You can find some of my photos here.</p>
-            </div>
-        </template>
-        
-        <template id="workTemplate">
-            <ul>
-                <li>quizlet clone</li>
-                <li>logic calculator</li>
-                <li>deckbox</li>
-                <li>this site</li>
-            </ul>
-        </template>
-       
-        <template id="photosTemplate">
-            <p>A few of my favorite photos from weddings and engagements I've shot over the past few years</p>
-            <div class="carousel">
-                <img id="currentPhoto" src="public/assets//photos/1.jpg" alt="image"/>
-            </div>
-            <button id="nextPhoto">Next</button>
-            <button id="prevPhoto">Prev</button>
-        </template>
-        
-        <template id="contactTemplate">
-            <form 
-                action="mailto:cobbett.n@gmail.com"
-                method="POST"
-                enctype="multipart/form-data"
-                name="EmailForm">
-                <label>
-                    Name:
-                    <input type="text" name="name"/>
-                </label>
-                <label>
-                    Email:
-                    <input type="email" name="email">
-                </label>
-                <label>
-                    Message:
-                    <textarea name="message"></textarea>
-                </label>
-                <input type="submit">
-            </form>
-        </template>
-
+        <h1>Hello, my name is Nathan Cobbett. I'm a full stack developer based in Pittsburgh, PA.</h1>
+        <div class="bio">
+            <img id="bioPhoto" src="public/assets/me.jpg" alt="me on a hike">
+            <p>
+                I like to build things with web technologies. 
+                I started programming in my downtime as a hobby and it eventually turned into my career.
+                Through my work as a software engineer, I strive to create robust, accessible and performant applications that are empowering to all users.
+            </p>
+            <p>
+                I'm open to job opportunites where I can work with other like-minded developers and continue to expand my skillset as an engineer. 
+                Feel free to check out my <a id="resume" href="public/assets/NathanCobbettResume.pdf" target="_blank">resume</a> and get in touch.
+            </p>
+            <p>
+                When I'm not on my computer I like spending time in the woods, retro gaming and bouldering.
+                I also enjoy taking pictures as a hobby and help run a small photography business. 
+                A few samples of my photos can be found here as well. 
+            </p>
+        </div>
     </main>
     <footer>
-        <a href="https://github.com/cjn98">
+        <a href="https://github.com/cobbettn">
             <img src="public/assets/GitHub_Logo_White.png" alt="My Github">
         </a>
         <a href="https://www.linkedin.com/in/nathan-cobbett/">

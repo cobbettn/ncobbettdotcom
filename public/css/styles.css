@@ -4,7 +4,6 @@ body {
     height: 100%;
     /* margin collapse fix to hide scrollbar */
     margin: 0; 
-    animation: fadeVisibility 1s;
 }
 
 body {
@@ -36,21 +35,15 @@ main {
     flex: 1 0 auto;
 }
 
-div#content {
-    flex-direction: column;
-    display: flex;
-}
-
-#homePicture {
+.bio > img {
     border-radius: 5%;
     height: auto;
     margin-left: 1em;
-    margin-top: 1em;
     margin-bottom: 1em;
     float: right;
 }
 
-a#resume {
+a#resume, a#contact, a#work {
     color: inherit;
 }
 
@@ -59,6 +52,7 @@ footer {
     display: flex;
     justify-content: center;
     padding-bottom: 1rem;
+    padding-top: 1rem;
 }
 
 footer img {
@@ -71,7 +65,7 @@ footer img {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    #homePicture{
+    .bio > img{
         width: 100%;
         float: none;
     }
@@ -84,14 +78,14 @@ footer img {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    #homePicture {
+    .bio > img {
         width: 50%;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    #homePicture {
+    .bio > img {
         width: 33%;
     }
     body {
@@ -113,17 +107,46 @@ footer img {
     }
 }
 
-@keyframes fadeVisibility {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 #currentPhoto {
-    height: 90vh;
+    max-height: 75vh;
+    max-width: 75vw;
     width: auto;
     margin: auto;
+}
+
+form#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form#contact label, form#contact input[type=submit] {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+form#contact label {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+form#contact label input, form#contact label textarea {
+    flex: 1;
+}
+
+form#contact input[type=submit] {
+    color: white;
+    background-color: black;
+    border: white solid 1px;
+    width: 50%;
+}
+
+form#contact input[type=submit]:hover {
+    opacity: 0.75;
+}
+
+form#contact input[type=submit]:active {
+    background-color: white;
+    color: black;
 }
