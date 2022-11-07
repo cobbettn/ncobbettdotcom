@@ -1,4 +1,6 @@
-html,
+/* common */
+
+html, 
 body {
     font-family: 'JetBrains Mono';
     height: 100%;
@@ -35,18 +37,6 @@ main {
     flex: 1 0 auto;
 }
 
-.bio > img {
-    border-radius: 5%;
-    height: auto;
-    margin-left: 1em;
-    margin-bottom: 1em;
-    float: right;
-}
-
-a#resume, a#contact, a#work {
-    color: inherit;
-}
-
 footer {
     flex-shrink: 0;
     display: flex;
@@ -60,6 +50,114 @@ footer img {
     width: auto;
     padding: 0 1rem;
 }
+
+/* home */
+
+.bio > img {
+    border-radius: 5%;
+    height: auto;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    float: right;
+}
+
+a#resume, 
+a#contact, 
+a#work {
+    color: inherit;
+}
+
+/* photos */
+
+#currentPhoto {
+    max-height: 66vh;
+    max-width: 66vw;
+    width: auto;
+    margin: auto;
+}
+
+
+#thumbnails img {
+    max-width: 8rem;
+    max-height: 8rem;
+    padding: 1rem;
+    margin: auto;
+}
+
+#thumbnails {
+    display: flex;
+    flex: 1;
+}
+
+#thumbnailViewer, #photoViewer {
+    margin-top: 1rem;
+    display: flex;
+}
+
+#thumbnailViewer {
+    min-height: 10rem;
+    width: 100%;
+    background-color: #020202;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel button {
+    background-color: #0c0c0c;
+    color: white;
+    width: 3rem;
+    border-radius: 0.25rem;
+    /* border: solid white 1px; */
+}
+
+.carousel button:hover {
+    background-color: #020202;
+}
+
+/* contact */
+
+form#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form#contact label, 
+form#contact input[type=submit] {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+form#contact label {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+form#contact label input,
+form#contact label textarea {
+    flex: 1;
+}
+
+form#contact input[type=submit] {
+    color: white;
+    background-color: black;
+    border: white solid 1px;
+    width: 50%;
+}
+
+form#contact input[type=submit]:hover {
+    opacity: 0.75;
+}
+
+form#contact input[type=submit]:active {
+    background-color: white;
+    color: black;
+}
+
 
 /* breakpoints */
 
@@ -105,48 +203,4 @@ footer img {
     body {
         padding: 0 20%;
     }
-}
-
-#currentPhoto {
-    max-height: 75vh;
-    max-width: 75vw;
-    width: auto;
-    margin: auto;
-}
-
-form#contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form#contact label, form#contact input[type=submit] {
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-}
-
-form#contact label {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-}
-
-form#contact label input, form#contact label textarea {
-    flex: 1;
-}
-
-form#contact input[type=submit] {
-    color: white;
-    background-color: black;
-    border: white solid 1px;
-    width: 50%;
-}
-
-form#contact input[type=submit]:hover {
-    opacity: 0.75;
-}
-
-form#contact input[type=submit]:active {
-    background-color: white;
-    color: black;
 }

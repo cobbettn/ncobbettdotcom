@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="public/css/styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=JetBrains%20Mono" />
     <script src="public/js/navigation.js"></script>
-    <script src="public/js/photos.js"></script>
+    <script defer src="public/js/photos.js"></script>
 </head>
 
 <body>
@@ -20,10 +20,17 @@
     <main>
         <hr>
         <div class="carousel">
-            <img id="currentPhoto" src="public/assets//photos/1.jpg" alt="image"/>
+            <div id="photoViewer">
+                <button id="prevPhoto">&lt;</button>
+                <img id="currentPhoto" src="public/assets//photos/1.jpg"/>
+                <button id="nextPhoto">&gt;</button>
+            </div>
+            <div id="thumbnailViewer">
+                <button id="prevThumbnail">&lt;</button>
+                <div id="thumbnails"></div>
+                <button id="nextThumbnail">&gt;</button>
+            </div>
         </div>
-        <button id="nextPhoto">Next</button>
-        <button id="prevPhoto">Prev</button>
     </main>
     <footer>
         <a href="https://github.com/cobbettn">
