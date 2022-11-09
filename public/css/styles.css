@@ -70,18 +70,21 @@ a#work {
 /* photos */
 
 #currentPhoto {
-    max-height: 66vh;
-    max-width: 66vw;
+    max-height: 60vh;
+    max-width: 60vw;
     width: auto;
     margin: auto;
 }
 
-
 #thumbnails img {
-    max-width: 8rem;
-    max-height: 8rem;
-    padding: 1rem;
+    max-width: 7rem;
+    max-height: 7rem;
     margin: auto;
+}
+
+#thumbnails img:hover {
+    box-shadow: 2px 2px 2px 2px black;
+    cursor: pointer;
 }
 
 #thumbnails {
@@ -90,14 +93,14 @@ a#work {
 }
 
 #thumbnailViewer, #photoViewer {
-    margin-top: 1rem;
     display: flex;
 }
 
 #thumbnailViewer {
-    min-height: 10rem;
+    min-height: 15vh;
     width: 100%;
     background-color: #020202;
+    margin-top: 0.5rem;
 }
 
 .carousel {
@@ -110,11 +113,15 @@ a#work {
     color: white;
     width: 3rem;
     border-radius: 0.25rem;
-    /* border: solid white 1px; */
+    border: none;
 }
 
 .carousel button:hover {
-    background-color: #020202;
+    background-color: #101010;
+}
+
+.carousel button:active {
+    background-color: #0c0c0c;
 }
 
 /* contact */

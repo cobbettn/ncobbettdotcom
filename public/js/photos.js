@@ -1,44 +1,74 @@
-const totalPhotos = 27; // update this count when photos are added/removed
-const thumbnails = 4;
-let thumbnailPage = 0;
-let photo = 0;
+const photosPage = {
+    photo: 0,
+    totalPhotos: 27, // remember to update this when adding or removing photos
+    thumbnailsDisplayed: 5,
+    thumbnailPage: 0,
+    currentPhoto: document.querySelector('img#currentPhoto'),
+    nextPhotoButton: document.querySelector('button#nextPhoto'),
+    prevPhotoButton: document.querySelector('button#prevPhoto'),
+    nextThumbnailButton: document.querySelector('button#nextThumbnail'),
+    prevThumbnailButton: document.querySelector('button#prevThumbnail'),
+    viewPhoto: function(i) {
+        this.currentPhoto.src = `public/assets/photos/${i + 1}.jpg`;
+    },
+    updateThumbnails: function() {
+        const thumbnailContainer = document.querySelector('#thumbnails');
+        thumbnailContainer.replaceChildren();
+        const startingIndex = this.thumbnailPage * this.thumbnailsDisplayed;
+        for (let i = startingIndex; i < startingIndex + this.thumbnailsDisplayed && i < this.totalPhotos; i++) {
+            const img = document.createElement('img');
+            img.src = `public/assets/photos/${i + 1}.jpg`;
+            img.onclick = () => this.viewPhoto(i);
+            thumbnailContainer.appendChild(img);
+        }
+    },
+    nextPhoto: function() {
+        if (this.photo < this.totalPhotos - 1) {
+            this.viewPhoto(++this.photo);
+            this.prevPhotoButton.disabled = false;
+        }
+        else {
+            this.nextPhotoButton.disabled = true;
+        }
+    },
+    prevPhoto: function() {
+        if (this.photo > 0) {
+            this.viewPhoto(--this.photo);
+            this.nextPhotoButton.disabled = false;
+        }
+        else {
+            this.prevPhotoButton.disabled = true;
+        }
+    },
+    nextThumbnailPage: function() {
+        if ((this.thumbnailPage * this.thumbnailsDisplayed) + this.thumbnailsDisplayed < this.totalPhotos) {
+            this.thumbnailPage++;
+            this.updateThumbnails();
+            this.prevThumbnailButton.disabled = false;
+        }
+        else {
+            console.log('foo');
+            this.nextThumbnailButton.disabled = true;
+        }
+    },
+    prevThumbnailPage: function() {
+        if (this.thumbnailPage * this.thumbnailsDisplayed > 0) {
+            this.thumbnailPage--;
+            this.updateThumbnails();
+            this.nextThumbnailButton.disabled = false;
+        }
+        else {
+            this.prevThumbnailButton.disabled = true;
+        }
+    },
+    setup: function() {
+        this.nextPhotoButton.addEventListener('click', () => this.nextPhoto());
+        this.prevPhotoButton.addEventListener('click', () => this.prevPhoto());
+        this.nextThumbnailButton.addEventListener('click', () => this.nextThumbnailPage());
+        this.prevThumbnailButton.addEventListener('click', () => this.prevThumbnailPage());
+        this.updateThumbnails();
 
-const updateThumbnails = () => {
-    const index = thumbnailPage * thumbnails;
-    const thumbnailContainer = document.querySelector('#thumbnails');
-    thumbnailContainer.replaceChildren();
-    for (let i = index; i < index + thumbnails && i < totalPhotos; i++) {
-        const img = document.createElement('img');
-        img.src = `public/assets/photos/${i + 1}.jpg`;
-        thumbnailContainer.appendChild(img);
     }
 }
 
-
-const currentPhoto = document.querySelector('#currentPhoto');
-document.querySelector('#nextPhoto').addEventListener('click', () => {
-    if (photo < totalPhotos - 1) {
-        photo++;
-        currentPhoto.src = `public/assets/photos/${photo + 1}.jpg`;
-    }
-});
-document.querySelector('#prevPhoto').addEventListener('click', () => {
-    if (photo > 0) {
-        photo--;
-        currentPhoto.src = `public/assets/photos/${photo + 1}.jpg`;
-    }
-});
-document.querySelector('#nextThumbnail').addEventListener('click', () => {
-    if ((thumbnailPage * thumbnails) + thumbnails < totalPhotos) {
-        thumbnailPage++;
-        updateThumbnails();
-    }
-});
-document.querySelector('#prevThumbnail').addEventListener('click', () => {
-    if (thumbnailPage * thumbnails > 0) {
-        thumbnailPage--;
-        updateThumbnails();
-    }
-});
-updateThumbnails();
-
+photosPage.setup();
