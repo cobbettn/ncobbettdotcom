@@ -1,8 +1,8 @@
 const photosPage = {
-    photo: 0,
     totalPhotos: 21, // reminder to update this when adding or removing photos
-    thumbnailPage: 0,
     thumbnailsPerPage: 5,
+    photo: 0,
+    thumbnailPage: 0,
     currentPhoto: document.querySelector('img#currentPhoto'),
     nextPhotoButton: document.querySelector('button#nextPhoto'),
     prevPhotoButton: document.querySelector('button#prevPhoto'),
