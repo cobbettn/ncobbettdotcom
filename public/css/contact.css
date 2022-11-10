@@ -1,0 +1,38 @@
+form#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form#contact label, 
+form#contact input[type=submit] {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+form#contact label {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+form#contact label input,
+form#contact label textarea {
+    flex: 1;
+}
+
+form#contact input[type=submit] {
+    color: white;
+    background-color: black;
+    border: white solid 1px;
+    width: 50%;
+}
+
+form#contact input[type=submit]:hover {
+    opacity: 0.75;
+}
+
+form#contact input[type=submit]:active {
+    background-color: white;
+    color: black;
+}

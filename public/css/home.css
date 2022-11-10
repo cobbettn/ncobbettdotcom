@@ -1,0 +1,12 @@
+    
+    .bio > img {
+        border-radius: 5%;
+        height: auto;
+        margin-left: 1em;
+        margin-bottom: 1em;
+        float: right;
+    }
+    
+    a#resume {
+        color: inherit;
+    }

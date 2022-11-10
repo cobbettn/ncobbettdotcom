@@ -18,7 +18,7 @@ window.onload = () => {
         }
     ];
     const { pathname } =  window.location;
-    const navLinks = document.querySelectorAll('nav a');
     const linkIndex = pages.findIndex((page) => page.path === pathname);
+    const navLinks = document.querySelectorAll('nav a');
     navLinks[linkIndex].style.textDecoration = 'underline';
 }

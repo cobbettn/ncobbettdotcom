@@ -3,7 +3,6 @@ const photosPage = {
     totalPhotos: 21, // reminder to update this when adding or removing photos
     thumbnailPage: 0,
     thumbnailsPerPage: 5,
-    totalThumbnailPages: Math.ceil(this.totalPhotos / this.thumbnailsPerPage),
     currentPhoto: document.querySelector('img#currentPhoto'),
     nextPhotoButton: document.querySelector('button#nextPhoto'),
     prevPhotoButton: document.querySelector('button#prevPhoto'),
@@ -11,10 +10,10 @@ const photosPage = {
     prevThumbnailButton: document.querySelector('button#prevThumbnail'),
     viewPhoto: function(i) {
         this.photo = i;
-        if (i === 0) {
+        if (this.photo  === 0) {
             this.prevPhotoButton.disabled = true;
         }
-        else if (i + 1 === this.totalPhotos) {
+        else if (this.photo + 1 === this.totalPhotos) {
             this.nextPhotoButton.disabled = true;
         }
         else {
@@ -58,8 +57,6 @@ const photosPage = {
         if (this.thumbnailPage < this.totalThumbnailPages - 1) {
             this.thumbnailPage++;
             this.updateThumbnails();
-            console.log('bar');
-
         }
     },
     prevThumbnailPage: function() {
@@ -73,6 +70,7 @@ const photosPage = {
         this.prevPhotoButton.addEventListener('click', () => this.prevPhoto());
         this.nextThumbnailButton.addEventListener('click', () => this.nextThumbnailPage());
         this.prevThumbnailButton.addEventListener('click', () => this.prevThumbnailPage());
+        this.totalThumbnailPages = Math.ceil(this.totalPhotos / this.thumbnailsPerPage);
         this.updateThumbnails();
     }
 }
