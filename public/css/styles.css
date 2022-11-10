@@ -12,6 +12,7 @@ body {
     color: white;
     background-color: black;
     padding: 0 5%;
+    animation: fadeInFromNone 0.75s ease-out;
 }
 
 nav {
@@ -92,5 +93,17 @@ footer img {
 @media only screen and (min-width: 1200px) {
     body {
         padding: 0 20%;
+    }
+}
+
+/* animation */
+
+@keyframes fadeInFromNone {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
