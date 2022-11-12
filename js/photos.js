@@ -20,7 +20,7 @@ const photosPage = {
             this.prevPhotoButton.disabled = false;
             this.nextPhotoButton.disabled = false;
         }
-        this.currentPhoto.src = `public/assets/photos/${this.photo + 1}.jpg`;
+        this.currentPhoto.src = `images/photos/${this.photo + 1}.jpg`;
     },
     nextPhoto: function() {
         if (this.photo < this.totalPhotos - 1) {
@@ -38,7 +38,7 @@ const photosPage = {
         const startingIndex = this.thumbnailPage * this.thumbnailsPerPage;
         for (let i = startingIndex; i < startingIndex + this.thumbnailsPerPage && i < this.totalPhotos; i++) {
             const img = document.createElement('img');
-            img.src = `public/assets/photos/${i + 1}.jpg`;
+            img.src = `images/photos/${i + 1}.jpg`;
             img.onclick = () => this.viewPhoto(i);
             thumbnailContainer.appendChild(img);
         }
