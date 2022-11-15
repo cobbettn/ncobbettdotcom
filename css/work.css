@@ -1,0 +1,24 @@
+ul#projects {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+ul#projects li {
+    margin: 0.5rem;
+    background-color: #020202;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: solid #0c0c0c 1px;
+}
+
+ul#projects a {
+    color: inherit;
+}
+
+.pageTitle {
+    text-align: center;
+}
+
+.title {
+    font-size: 1.25rem;
+}
